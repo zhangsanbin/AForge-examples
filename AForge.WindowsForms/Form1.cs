@@ -68,5 +68,10 @@ namespace AForge.WindowsForms
                 pictureBox1.Image.Dispose();
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            pictureBox1.Image.Save("C:\\Users\\Andy\\Downloads\\xxx.jpeg");
+        }
     }
 }
