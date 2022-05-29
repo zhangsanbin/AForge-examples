@@ -153,5 +153,11 @@
                 Maximum="256"
                 Minimum="0"
                 Value="{Binding Radius}" />
+        <Button Content="Save Image" Grid.Column="1" 
+                Margin="10,320,0,0"
+                HorizontalAlignment="Left"
+                VerticalAlignment="Top"                
+                Width="96" Height="26" 
+                RenderTransformOrigin="0.078,-0.886" Click="Button_Click"/>
     </Grid>
 </Window>
