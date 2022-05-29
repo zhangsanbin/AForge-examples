@@ -434,10 +434,23 @@ namespace WpfPostItDetector
             }
         }
 
-        #endregion
-        
 
-        
+
+        #endregion
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            //Graphics g = Graphics.FromImage(myBitmap);
+            //var pen = new System.Drawing.Pen(System.Drawing.Color.Red, /*thickness = */ 1);
+            //g.DrawRectangle(pen, x1, y1, x2 - x1, y2 - y1);
+            //pen.Dispose();
+            //g.Dispose();
+
+            var encoder = new PngBitmapEncoder();
+            encoder.Frames.Add(BitmapFrame.Create((BitmapSource)this.videoPlayer.Source));
+            using (System.IO.FileStream stream = new System.IO.FileStream("D:\\xxx.jpeg", System.IO.FileMode.Create))
+            encoder.Save(stream);
+        }
     }
 
     
